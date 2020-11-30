@@ -10,8 +10,8 @@ var PORT = process.env.PORT || 3000;
 var mongoose = require("mongoose");
 require("dotenv").config();
 
-mongoose.connect("mongodb://localhost:bookBarter/bookDb");
-// mongoose.connect('mongodb://andrei:12345@ds157571.mlab.com:57571/book_barter');
+// mongoose.connect("mongodb://localhost:bookBarter/bookDb");
+mongoose.connect("mongodb://andrei:12345@ds157571.mlab.com:57571/book_barter");
 
 // app.use(favicon(path.join( __dirname, 'dist/img', 'favicon.ico')));
 

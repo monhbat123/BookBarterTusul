@@ -10,7 +10,7 @@ export default function Book_description(props) {
         <b>Эзэмшигч:</b> {props.createdBy}
       </p>
       <p className="sub_title">
-        <b>Үнэлгээ:</b> {props.rating} of 5
+        <b>Үнэлгээ:</b> {props.rating}
       </p>
       {props.onTrade ? (
         <p className="highlighted">Солилцогдож байгаа</p>

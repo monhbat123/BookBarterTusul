@@ -10,6 +10,7 @@ class Books extends React.Component {
     this.state = {
       filterToShow: "all",
     };
+    console.log(props.auth);
   }
 
   componentWillMount() {
@@ -71,6 +72,7 @@ class Books extends React.Component {
               name={e.name}
               id={e._id}
               img_url={e.img_url}
+              author={e.author}
               rating={e.rating}
               currentUser={currentUser}
               delete={this.deleteBook.bind(this)}
@@ -80,7 +82,6 @@ class Books extends React.Component {
           );
         })
       : null;
-
     //get all the books on trade
     const booksOnTrade =
       this.props.trades && this.props.auth.authenticated ? (

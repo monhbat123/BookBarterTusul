@@ -8,7 +8,7 @@ import AlertMsg from "./stateless/AlertMsg";
 
 var validate = (values) => {
   const errors = {};
-  const inputs = ["name", "img_url", "rating"];
+  const inputs = ["name", "img_url", "rating", "address"];
   inputs.forEach((e) => {
     if (!values[e]) {
       errors[e] = "Required";
@@ -21,6 +21,7 @@ var validate = (values) => {
 class BookAdder extends React.Component {
   constructor(props) {
     super(props);
+    console.log(props.auth.user);
   }
 
   submit(values) {
@@ -28,6 +29,7 @@ class BookAdder extends React.Component {
     let book = {
       name: values.name,
       img_url: values.img_url,
+      address: this.props.auth.user.address,
       rating: values.rating,
       onTrade: false,
       createdBy: this.props.auth.user.name,
@@ -65,12 +67,9 @@ class BookAdder extends React.Component {
           <Field
             name="rating"
             type="number"
-            min="0"
-            max="5"
             component={renderField}
-            label="Номны үнэлгээ"
+            label="Таны утасны дугаар"
           />
-
           <div className="form-group">
             <div className="col-sm-offset-2 col-sm-10">
               <button type="submit" className="btn btn-default">

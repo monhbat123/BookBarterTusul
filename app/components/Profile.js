@@ -22,7 +22,7 @@ class Profile extends React.Component {
   componentDidMount() {
     const { initialize } = this.props;
     let data = this.props.auth.user;
-
+    console.log("data", data);
     initialize({
       name: data.name,
       address: data.address,

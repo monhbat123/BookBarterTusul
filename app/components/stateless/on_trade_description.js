@@ -8,26 +8,34 @@ export default function On_trade_description(props) {
         <b>{props.name}</b>
       </p>
       <p className="sub_title">
-        <b>Owner:</b> {props.createdBy}
+        <b>Эзэмшигч:</b> {props.createdBy}
       </p>
       <p className="sub_title">
-        <b>With:</b> {props.requestedBy}
+        <b>Солилцогч:</b> {props.requestedBy}
       </p>
-      <p className="sub_title">Currently on Trade</p>
+      <p className="sub_title">
+        <strong>Одоогоор солилцоо явагдаж байна</strong>
+      </p>
       {props.createdById == props.currentUser ? (
         <div>
+          <p className="sub_title">
+            Таны солилцоо хийсэн хүний утасны дугаар <br></br>
+            <strong>{props.rating}</strong>
+          </p>
           <button
             className="btn btn-info"
+            style={{ marginTop: "50px" }}
             onClick={() => {
               props.handleDeleteOfTrade(props.id);
             }}
           >
-            Солилцоог хийх
+            Солилцоо хийгдсэн
           </button>
         </div>
       ) : (
         <p className="sub_title">
-          <strong>Та амжилттай солилцлоо</strong>
+          Таны солилцоо хийсэн хүний утасны дугаар <br></br>
+          <strong>{props.rating}</strong>
         </p>
       )}
     </div>
