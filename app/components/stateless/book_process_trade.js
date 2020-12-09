@@ -11,9 +11,6 @@ export default function Book_process_description(props) {
         <b>Эзэмшигч:</b> {props.createdBy}
       </p>
       <p className="sub_title">
-        <b>Байршил:</b> {props.address}
-      </p>
-      <p className="sub_title">
         <b>Хүсэлт илгээсэн:</b> {props.requestedBy}
       </p>
       <p className="sub_title">

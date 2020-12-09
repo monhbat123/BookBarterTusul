@@ -25,9 +25,9 @@ export default function On_trade_description(props) {
           <button
             className="btn btn-info"
             style={{ marginTop: "50px" }}
-            onClick={() => {
-              props.handleDeleteOfTrade(props.id);
-            }}
+            // onClick={() => {
+            //   props.handleDeleteOfTrade(props.id);
+            // }}
           >
             Солилцоо хийгдсэн
           </button>
